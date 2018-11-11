@@ -7,17 +7,17 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!--这是必须的文件引入-->
-  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="__PUBLIC__/css/bootstrap.min.css" rel="stylesheet">
 
   <link rel="stylesheet" href="https://teamemo.com/static/bower_components/font-awesome/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://teamemo.com/static/styles/landingpage-cf092c3767.css">
-  <script src="js/jquery-1.11.1.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
+  <script src="__PUBLIC__/js/jquery-1.11.1.min.js"></script>
+  <script src="__PUBLIC__/js/bootstrap.min.js"></script>
   <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css" rel="stylesheet">
   <!--这是必须的文件引入-->
   <!--自定义的css-->
-  <link href="css/good.css" rel="stylesheet">
-  <link href="css/someone.css" rel="stylesheet">
+  <link href="__PUBLIC__/css/good.css" rel="stylesheet">
+  <link href="__PUBLIC__/css/someone.css" rel="stylesheet">
   <!--自定义的css-->
   <title>分享</title>
 
@@ -39,19 +39,19 @@
         <div class="navbar-collapse collapse in" id="navcol-1" aria-expanded="true" style>
           <ul class="nav navbar-nav navbar-right">
             <li role="presentation">
-              <a href="index.html" aria-controls="home" role="tab">主页</a>
+              <a href="{:url('index/index/index')}" aria-controls="home" role="tab">主页</a>
             </li>
             <li role="presentation" class="">
-              <a href="publish.html" aria-controls="home" role="tab">我的</a>
+              <a href="{:url('index/publish/index')}" aria-controls="home" role="tab">我的</a>
             </li>
             <li role="presentation" class="active">
-              <a href="share.html" aria-controls="home" role="tab">分享</a>
+              <a href="{:url('index/share/index')}" aria-controls="home" role="tab">分享</a>
             </li>
             <li role="presentation" class="dropdown ">
-              <a href="Login.html" class="dropdown-toggle" aria-controls="home" role="tab" data-toggle="tab dropdown">登录</a>
+              <a href={:url('index/login/index')}" class="dropdown-toggle" aria-controls="home" role="tab" data-toggle="tab dropdown">登录</a>
               <ul class="dropdown-menu submenu">
                 <li>
-                  <a href="Login.html">注册</a>
+                  <a href="{:url('index/login/index')}">注册</a>
                 </li>
               </ul>
             </li>
@@ -59,7 +59,7 @@
         </div>
       </div>
     </div>
-    <div style="clear:both;height:70px;"></div>
+    <div style="clear:both;height:70px"></div>
     <div class="center">
       <h1>Share</h1>
       <p class="lead">You can see all the sharing here.</p>
@@ -69,7 +69,7 @@
       <div class="container gray-background piece-division" style="position:relative;">
         <div class="row feature-row">
           <div class="col-md-6 image">
-            <img class="outdent-shadow image-responsive playing" src="images/bg_note_coffee.jpg" width="600" height="300"></div>
+            <img class="outdent-shadow image-responsive playing" src="__PUBLIC__/images/bg_note_coffee.jpg" width="600" height="300"></div>
           <div class="col-md-6 text good-text">
             <h2><a href="detail.html" class="un">The author's name is written here</a></h2>
             <h3>The title of the article is written here</h3>
@@ -117,7 +117,7 @@
       <div class="container gray-background piece-division" style="position:relative;">
         <div class="row feature-row">
           <div class="col-md-6 image">
-            <img class="outdent-shadow image-responsive playing" src="images/bg_note_coffee.jpg" width="600" height="300"></div>
+            <img class="outdent-shadow image-responsive playing" src="__PUBLIC__/images/bg_note_coffee.jpg" width="600" height="300"></div>
           <div class="col-md-6 text good-text">
             <h2><a href="detail.html" class="un">The author's name is written here</a></h2>
             <h3>The title of the article is written here</h3>
@@ -165,7 +165,7 @@
       <div class="container gray-background piece-division" style="position:relative;">
         <div class="row feature-row">
           <div class="col-md-6 image">
-            <img class="outdent-shadow image-responsive playing" src="images/bg_note_coffee.jpg" width="600" height="300"></div>
+            <img class="outdent-shadow image-responsive playing" src="__PUBLIC__/images/bg_note_coffee.jpg" width="600" height="300"></div>
           <div class="col-md-6 text good-text">
             <h2><a href="detail.html" class="un">The author's name is written here</a></h2>
             <h3>The title of the article is written here</h3>
@@ -190,7 +190,7 @@
           <div class="col-md-4 col-sm-6 footer-navigation">
               <h3><a href="/" style="display:inline-block">Recently</a></h3>
               <p class="links"><a href="index.html">Home</a><b> · </b><a target="_blank" href="publish.html">Publish</a><b>
-                      · </b><a href="share.html">Share</a><b>
+                      · </b><a href="index.html">Share</a><b>
 
           </div>
           <div class="col-md-4 col-sm-6 footer-contacts">

@@ -1,8 +1,8 @@
 <?php
-namespace app\Share\controller;
+namespace app\index\controller;
 use think\Controller;
 class Share extends Controller{
-    public function share(){
-        return $this->fetch();
+    public function index(){
+        return view();
     }
 }

@@ -1,8 +1,8 @@
 <?php
-namespace app\Detail\controller;
+namespace app\index\controller;
 use think\Controller;
 class Detail extends Controller{
-    public function detail(){
-        return $this->fetch();
+    public function index(){
+        return view();
     }
 }
