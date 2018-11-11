@@ -1,8 +1,8 @@
 <?php
-namespace app\Publish\controller;
+namespace app\index\controller;
 use think\Controller;
 class Publish extends Controller{
-    public function publish(){
-        return $this->fetch();
+    public function index(){
+        return view();
     }
 }
