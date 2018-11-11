@@ -9,7 +9,7 @@
     <title>Recently</title>
     <link href="__PUBLIC__/css/bootstrap.min.css" rel="stylesheet">
 
-<link rel="icon" href="share.ico" type="image/x-icon" />
+<link rel="icon" href="__PUBLIC__/share.ico" type="image/x-icon" />
     <link href="__PUBLIC__/css/good.css" rel="stylesheet">
     <link rel="stylesheet" href="https://teamemo.com/static/bower_components/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://teamemo.com/static/styles/landingpage-cf092c3767.css">
@@ -29,38 +29,20 @@
     <link href="__PUBLIC__/css/good.css" rel="stylesheet">
     <link href="__PUBLIC__/css/someone.css" rel="stylesheet">
     <!--自定义的css-->
+    <script type="text/javascript">
+        $(function(){
+            $(".nav").children("li").each(function(){
+                $(this).removeClass("active");
+            })
+            $(".home").addClass("active");
+        })
+    </script>
 </head>
 
 <body>
     <div>
-        <div class="navbar navbar-default navbar-fixed-top headerTopBack">
-            <div class="container">
-                <div class="navbar-header">
-                    <a class="navbar-brand navbar-link" href="index.html">Recently</a>
-                    <button class="navbar-toggle" data-toggle="collapse" data-target="#navcol-1" aria-expanded="true">
-                        <span class="sr-only">Toggle Navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                </div>
-                <div class="navbar-collapse collapse in" id="navcol-1" aria-expanded="true" style>
-                    <ul class="nav navbar-nav navbar-right">
-                        <li role="presentation" class="active"><a href="#" aria-controls="home" role="tab">主页</a></li>
-                        <li role="presentation" class=""><a href="{:url('index/publish/index')}" aria-controls="publish" role="tab">我的</a></li>
-                        <li role="presentation" class=""><a href="{:url('index/share/index')}" aria-controls="share" role="tab">分享</a></li>
-                        <li role="presentation" class="dropdown">
-                            <a href="{:url('index/login/index')}" class="dropdown-toggle" aria-controls="login" role="tab" data-toggle="tab dropdown">登陆</a>
-                            <ul class="dropdown-menu submenu">
-                                <li>
-                                    <a href="{:url('index/login/index')}">注册</a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+
+        {include file="/common/nav"}
         <div id="main-layout" class="layout no-sidebar">
             <div id="wrapper">
                 <div id="page-content-wrapper">
@@ -86,7 +68,7 @@
                 </div>
             </div>
         </div>
-       
+
         <div class=".container-fluid ">
             <div class="container">
                 <h2 class="text-center">My task 
@@ -218,10 +200,10 @@
                     </button></h2>
                 <div class="row feature-row" style="position:relative;">
                     <div class="col-md-6 image">
-                        <img class="outdent-shadow image-responsive playing" src="images/bg_note_coffee.jpg" width="600"
+                        <img class="outdent-shadow image-responsive playing" src="__PUBLIC__/images/bg_note_coffee.jpg" width="600"
                             height="300"></div>
                     <div class="col-md-6 text good-text">
-                        <h2><a href="detail.html" class="un">The author's name is written here</a></h2>
+                        <h2><a href="{:url('index/detail/index')}" class="un">The author's name is written here</a></h2>
                         <h3>The title of the article is written here</h3>
                         <div>
 
@@ -235,6 +217,7 @@
 
                         <span class="glyphicon glyphicon-eye-open" aria-hidden="true"> 100 &nbsp; </span>
                         <span class="glyphicon glyphicon-star-empty" aria-hidden="true"> 20</span>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>作者：啦啦啦</span>
                     </div>
 
                 </div>
@@ -261,29 +244,7 @@
             </div>
         </div>
 
-        <footer style="margin-top:50px">
-            <div class="row">
-                <div class="col-md-4 col-sm-6 footer-navigation">
-                    <h3><a href="/" style="display:inline-block">Recently</a></h3>
-                    <p class="links"><a href="index.html">Home</a><b> · </b><a target="_blank" href="publish.html">Publish</a><b>
-                            · </b><a href="share.html">Share</a><b>
-
-                </div>
-                <div class="col-md-4 col-sm-6 footer-contacts">
-                    <div><span class="fa fa-map-marker footer-contacts-icon"> </span>
-                        <p><span class="new-line-span">浙江绍兴</span>邮编：1213123</p>
-                    </div>
-                    <div><i class="fa fa-envelope footer-contacts-icon"></i>
-                        <p> <a href="mailto:info@teamemo.com" target="_blank">email： dasfdas@.com</a></p>
-                    </div>
-                </div>
-                <div class="clearfix visible-sm-block"></div>
-                <div class="col-md-4 footer-about">
-                    <h4>About the Team</h4>
-                    <p>Here you can share your latest achievements, make your plans and communicate with others</p>
-                </div>
-            </div>
-        </footer>
+      {include file="/common/footer"}
     </div>
 </body>
 

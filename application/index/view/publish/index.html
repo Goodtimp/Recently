@@ -5,7 +5,9 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <link rel="icon" href="__PUBLIC__/share.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="https://teamemo.com/static/styles/landingpage-cf092c3767.css">
   <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css" rel="stylesheet">
   <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
   <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script>
@@ -14,90 +16,127 @@
   <title>个人主页</title>
   <link href="__PUBLIC__/css/good.css" rel="stylesheet" />
   <link href="__PUBLIC__/css/someone.css" rel="stylesheet" />
+
   <script type="text/javascript" src="__PUBLIC__/js/good.js"></script>
+  <script type="text/javascript">
+      $(function(){
+          $(".nav").children("li").each(function(){
+              $(this).removeClass("active");
+          })
+          $(".my").addClass("active");
+      })
+  </script>
+
 </head>
 
 <body>
 <div class=".container-fluid ">
-  <div class="navbar navbar-default headerTopBack">
-    <div class="container">
-      <div class="navbar-header">
-        <a class="navbar-brand navbar-link" href="index.html">Recently</a>
-        <button class="navbar-toggle" data-toggle="collapse" data-target="#navcol-1" aria-expanded="true">
-          <span class="sr-only">Toggle Navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-      </div>
-      <div class="navbar-collapse collapse in" id="navcol-1" aria-expanded="true" style>
-        <ul class="nav navbar-nav navbar-right">
-          <li role="presentation" class=""><a href="{:url('index/index/index')}" aria-controls="home" role="tab">主页</a></li>
-          <li role="presentation" class="active"><a href={:url('index/publish/index')}" aria-controls="publish" role="tab">我的</a></li>
-          <li role="presentation" class=""><a href="{:url('index/share/index')}" aria-controls="share" role="tab">分享</a></li>
-          <li role="presentation" class="dropdown">
-            <a href="{:url('index/login/index')}" class="dropdown-toggle" aria-controls="login" role="tab" data-toggle="tab dropdown">登录</a>
-            <ul class="dropdown-menu submenu">
-              <li>
-                <a href="{:url('index/login/index')}">注册</a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  <div class="col-md-9 col-md-push-3">
+  {include file="/common/nav"}
+  <div class="col-md-9 col-md-push-3" style="margin-top: 100px;">
+    <div id="MyContent">
+      <div class="gray-background piece-division" style="position:relative;">
+        <div class="row feature-row">
+          <div class="col-md-6 image">
+            <img class="outdent-shadow image-responsive playing" src="__PUBLIC__/images/bg_note_coffee.jpg" width="100%"></div>
+          <div class="col-md-6 text good-text">
+            <h2><a href="{:url('index/detail/index')}" class="un">The title of the article</a></h2>
 
-    <!--浏览内容-->
-    <div id="previewContent">
-      <h1 style="text-align: center; ">
-        <div id="text-2" style="margin-right: auto;margin-left: auto;width: 550px;left: 0px;position: relative;height: auto;z-index: 3;font-size: 40px;line-height: -9px;color: rgb(68, 69, 73);font-family: opensans-regular-webfont;letter-spacing: -1px;">
-          <div id="main-layout" class="layout no-sidebar" style="color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 14px; letter-spacing: normal; text-align: start;">
-            <div id="wrapper">
-              <div class="A2" style="opacity: 1;">
-                <div id="text-2" style="padding-top: 100px; margin-right: auto; margin-left: auto; width: 550px; left: 0px; position: relative; background-color: transparent; height: auto; top: 50px; z-index: 3; text-align: center; font-size: 40px; line-height: 60px; color: rgb(68, 69, 73); font-family: opensans-regular-webfont; letter-spacing: -1px;">可以这样子写一个很好看的标题</div>
-                <div id="wrapper-A2-date-1" style="padding-top: 100px; padding-bottom: 20px; margin-right: auto; margin-left: auto; position: relative; width: 130px; height: 40px; z-index: 1;">
-                  <div id="A2-date-1" style="position: absolute; width: 130px; height: 120px; text-align: right; font-size: 15px; line-height: 24px; color: rgb(198, 198, 198); font-family: opensans-bold-webfont;"><br></div>
-                  <div id="A2-date-1" style="position: absolute; width: 130px; height: 120px; text-align: right; font-size: 15px; line-height: 24px; color: rgb(198, 198, 198); font-family: opensans-bold-webfont;"><br></div>
-                  <div id="A2-date-1" style="position: absolute; width: 130px; height: 120px; text-align: right; font-size: 15px; line-height: 24px; color: rgb(198, 198, 198); font-family: opensans-bold-webfont;">&nbsp;2018
-                    10 28</div>
-                  <div id="A2-icone-1" style="margin-top: 45px; position: absolute; background-image: url(&quot;__PUBLIC__/images/icone1.svg&quot;); background-repeat: no-repeat; width: 27px; height: 18px; left: 0px; top: 60px;"></div>
-                </div>
+            <div>
+
+              <p>Write a profile of the sharing here or what the author wants to say to users.</p>
+            </div>
+
+          </div>
+          <div class="like-postion-one">
+            <span class="glyphicon glyphicon-eye-open" aria-hidden="true"> 100 &nbsp; </span>
+            <span class="glyphicon glyphicon-star-empty" aria-hidden="true"> 20</span>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>作者：啦啦啦</span>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="gray-background piece-division" style="position:relative;padding-left:1%;">
+        <div >
+          <div class="row feature-row">
+            <div class="col-md-6 col-md-push-6 image"><img class="outdent-shadow image-responsive stopped" src="https://teamemo.com/static/animations/type.gif"
+                                                           width="100%"></div>
+            <div class="col-md-6 col-md-pull-6 text">
+              <h2>好书推荐</h2>
+
+              <div>
+                <p>The written text will be synced in real time with your team members. Ideal for creative processes
+                  like
+                  meetings, brainstorming or project planning.</p>
+
               </div>
-              <div class="A3" style="margin-top: 100px;margin-right: auto;margin-left: auto;position: relative;width: 600px;z-index: 1;height: auto;overflow-x: hidden;transition: all 0.25s ease-in-out 0s;">
-                <div class="A3-top">
-                  <div class="A3-image"><img src="__PUBLIC__/images/image1-01.jpg" alt="post an image with animation"
-                                             title="post an image with animation"></div>
+
+            </div>
+
+          </div>
+          <div class="like-postion-two">
+
+            <span class="glyphicon glyphicon-eye-open" aria-hidden="true"> 100 &nbsp; </span>
+            <span class="glyphicon glyphicon-star-empty" aria-hidden="true"> 20</span>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>作者：啦啦啦</span>
+          </div>
+        </div>
+      </div>
+      <br/>
+      <br/>
+      <button type="button" class="btn btn-default btn-lg" id="EditorNew">Editor New</button>
+    </div>
+    <div id="MyEditor">
+      <!--浏览内容-->
+      <div id="previewContent">
+        <h1 style="text-align: center; ">
+          <div id="text-2" style="margin-right: auto;margin-left: auto;width: 550px;left: 0px;position: relative;height: auto;z-index: 3;font-size: 40px;line-height: -9px;color: rgb(68, 69, 73);font-family: opensans-regular-webfont;letter-spacing: -1px;">
+            <div id="main-layout" class="layout no-sidebar" style="color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 14px; letter-spacing: normal; text-align: start;">
+              <div id="wrapper">
+                <div class="A2" style="opacity: 1;">
+                  <div id="text-2" style="padding-top: 100px; margin-right: auto; margin-left: auto; width: 550px; left: 0px; position: relative; background-color: transparent; height: auto; top: 50px; z-index: 3; text-align: center; font-size: 40px; line-height: 60px; color: rgb(68, 69, 73); font-family: opensans-regular-webfont; letter-spacing: -1px;">可以这样子写一个很好看的标题</div>
+                  <div id="wrapper-A2-date-1" style="padding-top: 100px; padding-bottom: 20px; margin-right: auto; margin-left: auto; position: relative; width: 130px; height: 40px; z-index: 1;">
+                    <div id="A2-date-1" style="position: absolute; width: 130px; height: 120px; text-align: right; font-size: 15px; line-height: 24px; color: rgb(198, 198, 198); font-family: opensans-bold-webfont;"><br></div>
+                    <div id="A2-date-1" style="position: absolute; width: 130px; height: 120px; text-align: right; font-size: 15px; line-height: 24px; color: rgb(198, 198, 198); font-family: opensans-bold-webfont;"><br></div>
+                    <div id="A2-date-1" style="position: absolute; width: 130px; height: 120px; text-align: right; font-size: 15px; line-height: 24px; color: rgb(198, 198, 198); font-family: opensans-bold-webfont;">&nbsp;2018
+                      10 28</div>
+                    <div id="A2-icone-1" style="margin-top: 45px; position: absolute; background-image: url(&quot;images/icone1.svg&quot;); background-repeat: no-repeat; width: 27px; height: 18px; left: 0px; top: 60px;"></div>
+                  </div>
                 </div>
-                <div class="A3-top-2" style="padding: 50px 10px 40px; position: relative; width: 600px; height: auto; z-index: 1; left: 0px;">
-                  <blockquote style="position: relative; font-size: 16px; line-height: 27.2px; left: 0px; color: rgb(71, 72, 81); font-family: opensans-regular-webfont; -webkit-font-smoothing: antialiased;">当然你也可以放一个张很好看的图片，或者写一段很漂亮的代码：</blockquote>
-                  <pre style="position: relative; font-size: 16px; line-height: 27.2px; left: 0px; color: rgb(71, 72, 81); font-family: opensans-regular-webfont; -webkit-font-smoothing: antialiased;">printf("I Love You")</pre>
-                  <div id="A3-text-1" style="position: relative; font-size: 16px; line-height: 27.2px; left: 0px; color: rgb(71, 72, 81); font-family: opensans-regular-webfont; -webkit-font-smoothing: antialiased;"><br></div>
-                  <div id="A3-text-1" style="position: relative; font-size: 16px; line-height: 27.2px; left: 0px; color: rgb(71, 72, 81); font-family: opensans-regular-webfont; -webkit-font-smoothing: antialiased;">&nbsp;dang
-                    ran ni ye ke yi xiang wo yi yang yong pin yin lai xie wen zhang.因为字母也是非常好看的。</div>
-                  <div id="A3-text-1" style="position: relative; font-size: 16px; line-height: 27.2px; left: 0px; color: rgb(71, 72, 81); font-family: opensans-regular-webfont; -webkit-font-smoothing: antialiased;">甚至你可以直接复制网页上面的内容到这里来，这个格式会保存下来。</div>
-                  <div id="A3-text-1" style="position: relative; font-size: 16px; line-height: 27.2px; left: 0px; color: rgb(71, 72, 81); font-family: opensans-regular-webfont; -webkit-font-smoothing: antialiased;"><br></div>
-                  <div id="A3-text-1" style="position: relative; font-size: 16px; line-height: 27.2px; left: 0px; color: rgb(71, 72, 81); font-family: opensans-regular-webfont; -webkit-font-smoothing: antialiased;"><br></div>
-                  <div id="A3-text-1" style="text-align: right; position: relative; font-size: 16px; line-height: 27.2px; left: 0px; color: rgb(71, 72, 81); font-family: opensans-regular-webfont; -webkit-font-smoothing: antialiased;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    &nbsp; 赶快发表一篇很漂亮的文章吧！<br></div>
-                  <div><br></div>
+                <div class="A3" style="margin-top: 100px;margin-right: auto;margin-left: auto;position: relative;width: 600px;z-index: 1;height: auto;overflow-x: hidden;transition: all 0.25s ease-in-out 0s;">
+                  <div class="A3-top">
+                    <div class="A3-image"><img src="__PUBLIC__/images/image1-01.jpg" alt="post an image with animation"
+                                               title="post an image with animation"></div>
+                  </div>
+                  <div class="A3-top-2" style="padding: 50px 10px 40px; position: relative; width: 600px; height: auto; z-index: 1; left: 0px;">
+                    <blockquote style="position: relative; font-size: 16px; line-height: 27.2px; left: 0px; color: rgb(71, 72, 81); font-family: opensans-regular-webfont; -webkit-font-smoothing: antialiased;">当然你也可以放一个张很好看的图片，或者写一段很漂亮的代码：</blockquote>
+                    <pre style="position: relative; font-size: 16px; line-height: 27.2px; left: 0px; color: rgb(71, 72, 81); font-family: opensans-regular-webfont; -webkit-font-smoothing: antialiased;">printf("I Love You")</pre>
+                    <div id="A3-text-1" style="position: relative; font-size: 16px; line-height: 27.2px; left: 0px; color: rgb(71, 72, 81); font-family: opensans-regular-webfont; -webkit-font-smoothing: antialiased;"><br></div>
+                    <div id="A3-text-1" style="position: relative; font-size: 16px; line-height: 27.2px; left: 0px; color: rgb(71, 72, 81); font-family: opensans-regular-webfont; -webkit-font-smoothing: antialiased;">&nbsp;dang
+                      ran ni ye ke yi xiang wo yi yang yong pin yin lai xie wen zhang.因为字母也是非常好看的。</div>
+                    <div id="A3-text-1" style="position: relative; font-size: 16px; line-height: 27.2px; left: 0px; color: rgb(71, 72, 81); font-family: opensans-regular-webfont; -webkit-font-smoothing: antialiased;">甚至你可以直接复制网页上面的内容到这里来，这个格式会保存下来。</div>
+                    <div id="A3-text-1" style="position: relative; font-size: 16px; line-height: 27.2px; left: 0px; color: rgb(71, 72, 81); font-family: opensans-regular-webfont; -webkit-font-smoothing: antialiased;"><br></div>
+                    <div id="A3-text-1" style="position: relative; font-size: 16px; line-height: 27.2px; left: 0px; color: rgb(71, 72, 81); font-family: opensans-regular-webfont; -webkit-font-smoothing: antialiased;"><br></div>
+                    <div id="A3-text-1" style="text-align: right; position: relative; font-size: 16px; line-height: 27.2px; left: 0px; color: rgb(71, 72, 81); font-family: opensans-regular-webfont; -webkit-font-smoothing: antialiased;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      &nbsp; 赶快发表一篇很漂亮的文章吧！<br></div>
+                    <div><br></div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
 
-      </h1>
-      <h3></h3>
-      <h4></h4>
+        </h1>
+        <h3></h3>
+        <h4></h4>
+      </div>
+      <!--编辑内容-->
+      <div id="summernote" style="display: none;">Start a new article</div>
+
+      <button type="button" class="btn btn-default btn-lg" id="MyPublish">Publish</button>
+      &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+      <button type="button" class="btn btn-default btn-lg" id="btnprview">Preview</button>
     </div>
-    <!--编辑内容-->
-    <div id="summernote" style="display: none;">Start a new article</div>
-
-    <button type="button" class="btn btn-default btn-lg">Publish</button>
-    &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
-    <button type="button" class="btn btn-default btn-lg" id="btnprview">Preview</button>
   </div>
   <div class="col-md-3 col-md-pull-9">
     <div class="row" style="margin-top:25%">
@@ -155,7 +194,6 @@
 
 </div>
 
-
 <script>
     $(document).ready(function () {
         var toggleEditAndCont = toggleEditorAndContent;
@@ -180,8 +218,14 @@
                 $("#btnprview").text("Preview");
             }
         })
+        $("#MyEditor").hide();
+        $("#EditorNew").click(function () {
+            $("#MyEditor").toggle(100);
+            $("#MyContent").toggle(100);
+        })
     })
 </script>
+
 </body>
 
 </html>
